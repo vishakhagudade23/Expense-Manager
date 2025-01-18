@@ -1,17 +1,17 @@
 {
  "actions": [],
- "allow_rename": 1,
  "creation": "2024-10-05 23:05:09.672924",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "employee",
-  "expense_type",
   "date",
   "column_break_pptq",
-  "amount",
   "status",
-  "amended_from"
+  "amended_from",
+  "section_break_ouwe",
+  "types",
+  "total_amount"
  ],
  "fields": [
   {
@@ -20,26 +20,15 @@
    "label": "Employee"
   },
   {
-   "fieldname": "expense_type",
-   "fieldtype": "Link",
-   "label": "Expense Type",
-   "options": "Expense Type"
-  },
-  {
    "fieldname": "date",
    "fieldtype": "Date",
    "label": "Date"
   },
   {
-   "fieldname": "amount",
-   "fieldtype": "Currency",
-   "label": "Amount"
-  },
-  {
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Submitted\nUnder Review\nApproved\nRejected",
+   "options": "New\nSubmitted\nUnder Review\nApproved\nRejected",
    "permlevel": 1
   },
   {
@@ -55,12 +44,28 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "section_break_ouwe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "types",
+   "fieldtype": "Table",
+   "label": "Types",
+   "options": "Expense Type"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-10-06 00:41:04.687719",
+ "modified": "2025-01-03 01:47:22.306751",
  "modified_by": "Administrator",
  "module": "Expensemanager",
  "name": "Expense Claim",
